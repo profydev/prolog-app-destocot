@@ -1,12 +1,72 @@
+@use "@styles/color";
+
 .header {
-  width: 100%;
   height: 80px;
-  padding: 0 2rem;
-  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   background: white;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 1280px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex: 1 0 0;
+}
+
+// logo
+.logoContainer {
+  flex: 1 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 118px;
+  height: 33px;
+}
+
+// nav
+.navContainer {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  color: color.$gray-500;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+// dashboard link
+.dashboardLinkContainer {
+  flex: 1 0 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dashboardLink {
+  text-decoration: none;
+  background: color.$primary-600;
+  border-radius: 8px;
+  padding: 10px 18px;
+  border: 1px solid color.$primary-600;
+  box-shadow: 0 1px 2px 0 rgb(16 24 40 / 5%);
+  color: white;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .contactButton {
