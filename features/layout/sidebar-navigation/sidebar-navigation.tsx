@@ -7,6 +7,7 @@ import { MenuItemButton } from "./menu-item-button";
 import { MenuItemLink } from "./menu-item-link";
 import { Button } from "@features/ui";
 import styles from "./sidebar-navigation.module.scss";
+import { MenuItemExternalLink } from "./menu-item-external-link";
 
 const menuItems = [
   { text: "Projects", iconSrc: "/icons/projects.svg", href: Routes.projects },
@@ -79,11 +80,11 @@ export function SidebarNavigation() {
             ))}
           </ul>
           <ul className={styles.list}>
-            <MenuItemButton
+            <MenuItemExternalLink
               text="Support"
               iconSrc="/icons/support.svg"
               isCollapsed={isSidebarCollapsed}
-              onClick={() => alert("Support")}
+              href="mailto:support@prolog-app.com?subject=Support Request:"
             />
             <MenuItemButton
               text="Collapse"
