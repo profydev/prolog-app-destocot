@@ -21,7 +21,8 @@ describe("Support button", () => {
     cy.get("nav")
       .find("a")
       .contains("Support")
-      .should("have.attr", "href")
+      .should("be.visible")
+      .and("have.attr", "href")
       .then(($href) => {
         const href = $href.toString();
         return parseMailto(href);
